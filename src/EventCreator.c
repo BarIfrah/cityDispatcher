@@ -1,8 +1,8 @@
 #include "EventCreator.h"
-
-struct Event createEvent(uint8_t handlingDept, uint8_t severity, char *title, char *desc){
+#include <string.h>
+struct Event createEvent(uint8_t handlingDept, uint8_t severity, const char *title, const char *desc){
     Event event = {handlingDept, severity};
-    event.eventTitle = title;
-    event.eventDescription = desc;
+    strcpy(event.eventTitle,  title);
+    strcpy(event.eventDescription, desc);
     return event;
 }
