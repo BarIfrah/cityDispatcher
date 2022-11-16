@@ -1,0 +1,1 @@
+target_include_directories(cityDispatcher PRIVATE ${CMAKE_CURRENT_LIST_DIR})
